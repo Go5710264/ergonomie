@@ -49,18 +49,18 @@
 
 .button.up{
   top: 525px;
-  left: 30%;
+  left: 33%;
   z-index: 100;
 }
 
 .button.down{
   top: 525px;
-  left: 50%;
+  left: 53%;
   z-index: 100;
 }
 
 .page-text{
-  width: 500px;
+  width: 480px;
   grid-area: a;
 }
 
@@ -84,7 +84,7 @@
   color: #181818;
 
   text-align: left;
-  margin-top: 68px;
+  margin-top: 50px;
   margin-bottom: 0;
 }
 
@@ -94,6 +94,8 @@
 }
 
 .page-text-content-extension{
+  width: 480px;
+  
   font-family: 'Ubuntu', sans-serif;
   font-size: 22px;
   font-weight: 300;
@@ -101,7 +103,7 @@
   color: #181818;
 
   text-align: left;
-  margin: 0;
+  margin-top: 0;
 }
 
 @media (max-width: 321px){
