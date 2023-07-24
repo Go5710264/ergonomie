@@ -1,0 +1,38 @@
+.main-conteiner{
+  /* display: flex; */
+}
+
+.table-image{
+  position: relative;
+}
+
+.table-image-top{
+  padding-top: 15px;
+  z-index: 1;
+}
+
+.table-image-bottom{
+  bottom: 36px;
+
+  position: relative;
+
+  z-index: 99;
+}
+
+.button{
+  position: absolute;
+
+}
+
+.button.up{
+  left: 50%;
+  z-index: 100;
+}
+
+.button.down{
+  left: 60%;
+  z-index: 100;
+}
+
+.page-text{
+}
