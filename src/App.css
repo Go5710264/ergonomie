@@ -1,3 +1,6 @@
+body{
+  margin: 0;
+}
 #root {
   max-width: 1920px;
   margin: 0 auto;
@@ -8,5 +11,6 @@
 @media (max-width: 321px){
   #root{
     width: 100%;
+    padding: 15px;
   }
 }

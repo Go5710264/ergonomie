@@ -1,15 +1,24 @@
 @font-face {
   font-family: 'Ubuntu';
-  src: url('./assets/Ubuntu-Light.ttf');
+  src: url('./fonts/Ubuntu-Light.ttf');
+}
+
+@font-face {
+  font-family: "Bebas-Neue-Regular";
+  src: url('./fonts/Bebas-Neue-Cyrillic.ttf');
 }
 
 .main-conteiner{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-areas: 
+    'b b a' 
+    'b b c' 
+    'b b c';
 }
 
 .table-image{
   position: relative;
+  grid-area: b;
 }
 
 .table-image-top{
@@ -52,6 +61,7 @@
 
 .page-text{
   width: 500px;
+  grid-area: a;
 }
 
 .page-text-heading{
@@ -63,6 +73,7 @@
   color: #0B64FE;
 
   text-align: left;
+  margin: 0;
 }
 
 .page-text-content{
@@ -73,12 +84,95 @@
   color: #181818;
 
   text-align: left;
+  margin-top: 68px;
+  margin-bottom: 0;
+}
+
+.page-text-extension{
+  grid-area: c;
+  margin-top: 0;
+}
+
+.page-text-content-extension{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 37.4px;
+  color: #181818;
+
+  text-align: left;
+  margin: 0;
 }
 
 @media (max-width: 321px){
   .main-conteiner{
     width: 320px;
-    display: flex;
-    flex-direction: column-reverse;
+
+    display: grid;
+    grid-template-areas: 
+      'a a' 
+      'a a' 
+      'b b'
+      'c c';
+  }
+
+  .page-text{
+    width: 320px;
+  }
+
+  .page-text-heading{
+    font-family: "Bebas-Neue-Regular", sans-serif;    
+    font-size: 38px;
+    width: 320px;
+    box-sizing: border-box;
+    padding-right: 50px;
+  }
+
+  .page-text-content{
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 27.2px;
+    width: 320px;
+    box-sizing: border-box;
+    padding-right: 23px;
+  }
+
+  .table-image{
+    left: -90px
+  }
+
+  .button{
+    width: 61px;
+    height: 61px;
+  
+    font-size: 12px;
+  }
+  
+  .button.up{
+    top: 190px;
+    left: 30%;
+    z-index: 100;
+  }
+  
+  .button.down{
+    top: 190px;
+    left: 50%;
+    z-index: 100;
+  }
+
+  .page-text-extension{
+    width: 320px;
+  }
+
+  .page-text-content-extension{
+    font-size: 16px;
+    line-height: 27px;
+
+    box-sizing: border-box;
+    padding-right: 23px;
+  }
+
+  .table-image-bottom{
+    bottom: 19px;
   }
 }
