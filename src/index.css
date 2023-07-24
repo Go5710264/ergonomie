@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/Ubuntu-Light.ttf');
+}
+
 .main-conteiner{
-  /* display: flex; */
+  display: flex;
+  flex-direction: row;
 }
 
 .table-image{
@@ -21,18 +27,58 @@
 
 .button{
   position: absolute;
+  border: none;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
 
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+
+  background-color: #A6FFFF;
 }
 
 .button.up{
-  left: 50%;
+  top: 525px;
+  left: 30%;
   z-index: 100;
 }
 
 .button.down{
-  left: 60%;
+  top: 525px;
+  left: 50%;
   z-index: 100;
 }
 
 .page-text{
+  width: 500px;
+}
+
+.page-text-heading{
+  width: 100%;
+
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 62px;
+  font-weight: 300;
+  color: #0B64FE;
+
+  text-align: left;
+}
+
+.page-text-content{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 37.4px;
+  color: #181818;
+
+  text-align: left;
+}
+
+@media (max-width: 321px){
+  .main-conteiner{
+    width: 320px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

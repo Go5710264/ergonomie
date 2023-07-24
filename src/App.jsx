@@ -32,19 +32,12 @@ function App() {
 
   const table = useRef();
 
-  
-  // Возможно объединить данные функции
-  const tableLiftingHandler = (event) => {
+  const handlerTableMovement = (event) => {
     event.stopPropagation();
 
-    setRaiseTable(true);
-  };
-
-  const tableLoweringHandler = (event) => {
-    event.stopPropagation();
-
-    setLowerTable(true);
-  };
+    if(event.target.classList.contains('up')) setRaiseTable(true);
+    if(event.target.classList.contains('down')) setLowerTable(true);
+  }
 
   return (
     <>
@@ -57,18 +50,21 @@ function App() {
             className='table-image-top'
           />
           
-          <button
-            className='button up'
-            onClick={(event) => tableLiftingHandler(event)}
-          >
-            Вверх
-          </button>
-          <button
-            className='button down'
-            onClick={(event) => tableLoweringHandler(event)}
-          >
-            Вниз
-          </button>
+          <div>
+            <button
+              className='button up'
+              onClick={(event) => handlerTableMovement(event)}
+            >
+              вверх
+            </button>
+            <button
+              className='button down'
+              onClick={(event) => handlerTableMovement(event)}
+            >
+              вниз
+            </button>
+          </div>
+          
           <img 
             src={tableBottom}
             className='table-image-bottom'
@@ -76,7 +72,14 @@ function App() {
         </section>
 
         <section className='page-text'>
-          <h1>Эргономика — ключ к успеху современного человека</h1>
+          <h1 className='page-text-heading'>Эргономика — ключ к успеху современного человека</h1>
+          <p className='page-text-content'>
+            Cтильная столешница , выполненной из экологически безопасного материала (ДСП), и усиленной стальной рамы не составит труда разместить на поверхности инновационного стола большое количество крупногабаритной техники: стол выдерживает нагрузку до 80 кг.
+          </p>
+          <p className='page-text-content'>
+            Также столешница, обладающая меламиновым покрытием, хорошо переносит механические воздействия (царапины или удары), при контакте с водой не разрушается, устойчиво переносит бытовые химические вещества и не выгорает под воздействием ультрафиолета.
+          </p>
+
         </section>
 
       </main>
