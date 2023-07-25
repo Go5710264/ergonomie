@@ -172,6 +172,9 @@
 
     box-sizing: border-box;
     padding-right: 23px;
+
+    width: 315px;
+    padding: 0;
   }
 
   .table-image-bottom{
